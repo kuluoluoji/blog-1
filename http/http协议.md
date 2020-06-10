@@ -106,17 +106,17 @@ URL,全称是 UniformResourceLocator, 中文叫统一资源定位符,是互联�
 
   CDN 加速- 内容分发网络.依靠部署在各地的服务器,使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度。
 
-## 在浏览器输入 url 访问网址的过程中发生了什么?-
+## 在浏览器输入 url 访问网址的过程中发生了什么?
 
 > **url 组成**
 >
-> ![url组成](https://upload-images.jianshu.io/upload_images/301420-e308f1b76b1bfc97.png?imageMogr2/auto-orient/strip|imageView2/2/w/902/format/webp)
+> ![](https://minimax-1256590847.cos.ap-shanghai.myqcloud.com/img/20200610232407.png)
 >
 > 图中中括号是可选项
 >
-> - protocol 协议，常用的协议是 http
+> - protocol 协议，常用的协议是 http,https
 > - hostname 主机地址，可以是域名，也可以是 IP 地址
-> - port 端口 http 协议默认端口是：80 端口，如果不写默认就是:80 端口
+> - port 端口 http 协议默认端口是：80 端口，如果不写默认就是:80 端口 ;https 默认的端口号为443/tcp 443/udp
 > - path 路径 网络资源在服务器中的指定路径
 > - parameter 参数 如果要向服务器传入参数，在这部分输入
 > - query 查询字符串 如果需要从服务器那里查询内容，在这里编辑
