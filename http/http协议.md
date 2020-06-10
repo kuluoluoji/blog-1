@@ -1,6 +1,14 @@
+---
+title: http协议的学习
+tags:
+  - http
+description: 什么是http?什么是tcp?从浏览器输入url敲下回车到页面输出的过程中发生了什么?
+---
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
 
 - [关于 HTTP 协议](#%E5%85%B3%E4%BA%8E-http-%E5%8D%8F%E8%AE%AE)
   - [HTTP 简介](#http-%E7%AE%80%E4%BB%8B)
@@ -13,13 +21,6 @@
 - [在浏览器输入 url 访问网址的过程中发生了什么?-](#%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BE%93%E5%85%A5-url-%E8%AE%BF%E9%97%AE%E7%BD%91%E5%9D%80%E7%9A%84%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88-)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
----
-title: http协议的学习
-tags:
-  - http
-description: 什么是http?什么是tcp?从浏览器输入url敲下回车到页面输出的过程中发生了什么?
----
 
 ## [关于 HTTP 协议](https://www.cnblogs.com/ranyonsue/p/5984001.html)
 
