@@ -8,7 +8,6 @@ description: 什么是http?什么是tcp?从浏览器输入url敲下回车到页�
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
 
 - [关于 HTTP 协议](#%E5%85%B3%E4%BA%8E-http-%E5%8D%8F%E8%AE%AE)
   - [HTTP 简介](#http-%E7%AE%80%E4%BB%8B)
@@ -18,7 +17,7 @@ description: 什么是http?什么是tcp?从浏览器输入url敲下回车到页�
   - [C/S 架构](#cs-%E6%9E%B6%E6%9E%84)
   - [B/S 架构](#bs-%E6%9E%B6%E6%9E%84)
 - [HTTP 请求](#http-%E8%AF%B7%E6%B1%82)
-- [在浏览器输入 url 访问网址的过程中发生了什么?-](#%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BE%93%E5%85%A5-url-%E8%AE%BF%E9%97%AE%E7%BD%91%E5%9D%80%E7%9A%84%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88-)
+- [在浏览器输入 url 访问网址的过程中发生了什么?](#%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BE%93%E5%85%A5-url-%E8%AE%BF%E9%97%AE%E7%BD%91%E5%9D%80%E7%9A%84%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -108,6 +107,10 @@ URL,全称是 UniformResourceLocator, 中文叫统一资源定位符,是互联�
 
 ## 在浏览器输入 url 访问网址的过程中发生了什么?
 
+[输入url到页面渲染发生了什么](https://blog.yyge.top/blog/2019/03/18/HTTP%E9%9B%86%E9%94%A6%E7%B3%BB%E5%88%97%E4%B9%8B%E2%80%94%E2%80%94%E8%BE%93%E5%85%A5url%E5%88%B0%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88/)
+
+
+
 > **url 组成**
 >
 > ![](https://minimax-1256590847.cos.ap-shanghai.myqcloud.com/img/20200610232407.png)
@@ -132,10 +135,13 @@ URL,全称是 UniformResourceLocator, 中文叫统一资源定位符,是互联�
     - SSL/TLS 4 次握手交换信息(数字证书,3 个随机数,加密通信协议)
       - Client Hello Server Hello
 - 成功建立连接后向服务器(代理服务器,CDN 服务器)发送 HTTP 请求.
-- 服务器处理请求并返回数据(Http 报文),
+- 服务器处理请求并返回数据(Http 报文)
 - 浏览器解析并渲染出页面
   - 根据 HTML 解析生成 DOM 树
   - css 解析生成 css 规则树
   - JavaScript 资源下载
   - 结合 dom 树和 css 规则树进行绘制
 - 渲染出页面
+
+---
+
