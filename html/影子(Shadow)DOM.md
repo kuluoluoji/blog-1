@@ -1,3 +1,13 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Shadow DOM与虚拟DOM](#shadow-dom%E4%B8%8E%E8%99%9A%E6%8B%9Fdom)
+  - [**Shadow DOM**](#shadow-dom)
+  - [**Virtual DOM**](#virtual-dom)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Shadow DOM与虚拟DOM
 
 可以想象成我们在 Vue 或者 React 中使用的一个个组件，是一种将 HTML 结构、Style 封装起来的结构。我们熟悉的 `video` 标签，其实就是 `Shadow DOM` 的封装。

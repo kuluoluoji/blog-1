@@ -10,6 +10,12 @@ tags:
 
 - [JavaScript原型 prototype](#javascript%E5%8E%9F%E5%9E%8B-prototype)
   - [js原型链](#js%E5%8E%9F%E5%9E%8B%E9%93%BE)
+  - [prototype属性](#prototype%E5%B1%9E%E6%80%A7)
+  - [setPrototypeOf 与 Object.create区别](#setprototypeof-%E4%B8%8E-objectcreate%E5%8C%BA%E5%88%AB)
+- [new关键字](#new%E5%85%B3%E9%94%AE%E5%AD%97)
+- [ES5和ES6的继承](#es5%E5%92%8Ces6%E7%9A%84%E7%BB%A7%E6%89%BF)
+  - [es5继承](#es5%E7%BB%A7%E6%89%BF)
+  - [es6继承](#es6%E7%BB%A7%E6%89%BF)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -25,7 +31,7 @@ tags:
 
 ![`](https://minimax-1256590847.cos.ap-shanghai.myqcloud.com/img/image-20200608133124144.png)
 
-插一下
+插一下 [nodejs中有\__proto\__属性吗?](../bug/nodejs的__proto__.md)
 
 ### prototype属性
 
@@ -68,10 +74,12 @@ console.log(obj.prototype === me.__proto__) // false
 > **`Object.create()`**方法创建一个新对象，使用现有的对象来提供新创建的对象的`__proto__`。
 >
 > ```js
-> A.prototype = Object.create(B.prototype)
+> A.prototype = Object.create(A.prototype)
 > ```
 >
 > 新创建的A的原型指向B.prototype
+
+具体的区别可以看这篇[文章](https://juejin.im/post/5e9705c7f265da47ca692d0d)
 
 ## new关键字
 
@@ -127,7 +135,9 @@ console.log(su.name) // ls
 function Super() {}
 function Sub() {}
 
-Sub.prototype = new Super()	// 继承了Super 本质是重写原型对象,用一个新类型的实例替换
+Sub.prototype = new Super()	// 继承了Super
+/* 继承是通过创建Super的实例,并将该实例赋给Sub.prototype实现的,本质是重写原型对象,用一个新类型
+的实例替换 */
 Sub.prototype.constructor = Sub // Super => Sub.prototype => Sub
 
 var p = new Sub()
