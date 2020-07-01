@@ -15,7 +15,7 @@
 - [http 协议](./http/http协议.md)
 - [深拷贝,浅拷贝](./js/深拷贝,浅拷贝.md)
 - [作用域和闭包](./js/作用域与闭包.md)
-- [JavaScript原型及原型链,继承](./js/js原型的学习.md)
+- [JavaScript原型链与继承的学习](./js/js原型链与继承.md)
 - [实现一个简单的sleep函数](./js/实现一个简单的sleep函数.md)
 
 #### Vue
