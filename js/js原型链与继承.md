@@ -175,29 +175,27 @@ es6中的class语法其实只是语法糖,本质上还是通过原型链来继�
 <details>
     <summary>示例</summary>
     <pre>
-        class Animal {
-          constructor() {
-            this.species = "动物";
-          }
-          sayHi() {
-            return console.log("hi");
-          }
-        }
-
-        class Cat extends Animal {
-          constructor(name, color) {
-            super();
-            this.name = name;
-            this.color = color;
-          }
-        }
-
-        var animal = new Animal();
-        var cat1 = new Cat("大毛", "黄色");
-        Animal.prototype.sayHi(); //hi
-        animal.sayHi(); //hi
-        cat1.sayHi(); //hi
-        console.log(cat1.species); // 动物
+class Animal {
+  constructor() {
+    this.species = "动物";
+  }
+  sayHi() {
+    return console.log("hi");
+  }
+}
+class Cat extends Animal {
+  constructor(name, color) {
+    super();
+    this.name = name;
+    this.color = color;
+  }
+}
+var animal = new Animal();
+var cat1 = new Cat("大毛", "黄色");
+Animal.prototype.sayHi(); //hi
+animal.sayHi(); //hi
+cat1.sayHi(); //hi
+console.log(cat1.species); // 动物
     </pre>
 </details>
 
