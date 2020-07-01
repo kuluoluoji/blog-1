@@ -8,18 +8,19 @@ tags:
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [JavaScript原型 prototype](#javascript%E5%8E%9F%E5%9E%8B-prototype)
-  - [js原型链](#js%E5%8E%9F%E5%9E%8B%E9%93%BE)
+- [JavaScript原型链](#javascript%E5%8E%9F%E5%9E%8B%E9%93%BE)
+  - [什么是原型链](#%E4%BB%80%E4%B9%88%E6%98%AF%E5%8E%9F%E5%9E%8B%E9%93%BE)
   - [prototype属性](#prototype%E5%B1%9E%E6%80%A7)
   - [setPrototypeOf 与 Object.create区别](#setprototypeof-%E4%B8%8E-objectcreate%E5%8C%BA%E5%88%AB)
 - [new关键字](#new%E5%85%B3%E9%94%AE%E5%AD%97)
 - [ES5和ES6的继承](#es5%E5%92%8Ces6%E7%9A%84%E7%BB%A7%E6%89%BF)
   - [es5继承](#es5%E7%BB%A7%E6%89%BF)
+    - [prototype模式](#prototype%E6%A8%A1%E5%BC%8F)
   - [es6继承](#es6%E7%BB%A7%E6%89%BF)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## JavaScript原型 prototype
+## JavaScript原型链
 
 阮一峰老师的[《undefined与null的区别》](http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html):
 
@@ -27,9 +28,11 @@ tags:
 >
 > undefined表示"缺少值",即此处应该有一个值,但是还没有定义.
 
-### js原型链
+### 什么是原型链
 
-![`](https://minimax-1256590847.cos.ap-shanghai.myqcloud.com/img/image-20200608133124144.png)
+原型链是一种机制,指的是JavaScript每个对象包括原型对象都有一个内置的`__proto__`属性指向创建它的函数对象的原型对象,即prototype属性.
+
+![](https://minimax-1256590847.cos.ap-shanghai.myqcloud.com/img/image-20200608133124144.png)
 
 插一下 [nodejs中有\__proto\__属性吗?](../bug/nodejs的__proto__.md)
 
@@ -127,7 +130,19 @@ console.log(su.name) // ls
 
 [图解](http://keenwon.com/1524.html)
 
+[阮一峰《构造函数的继承》](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html)
+
 ### es5继承
+
+es5之前即构造函数的继承
+
+- 构造函数继承
+- [prototype模式](#prototype模式)
+- 直接继承prototype,即原型替换
+- 利用空对象作为中介
+- 拷贝继承
+
+#### prototype模式
 
 ![es5继承](img/es5继承.png)
 
@@ -139,6 +154,9 @@ Sub.prototype = new Super()	// 继承了Super
 /* 继承是通过创建Super的实例,并将该实例赋给Sub.prototype实现的,本质是重写原型对象,用一个新类型
 的实例替换 */
 Sub.prototype.constructor = Sub // Super => Sub.prototype => Sub
+/* 任何一个prototype对象都有一个constructor属性，指向它的构造函数。
+如果没有"Sub.prototype = new Super();"这一行，Sub.prototype.constructor是指向Sub的；
+加了这一行以后，Sub.prototype.constructor指向Super。*/
 
 var p = new Sub()
 
