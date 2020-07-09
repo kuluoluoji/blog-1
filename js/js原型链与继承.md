@@ -86,7 +86,7 @@ console.log(obj.prototype === me.__proto__) // false
 
 ## new关键字
 
-mdn关于`new`关键字进行的操作解释:
+[mdn](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new)关于`new`关键字进行的操作解释:
 
 > 1. 创建一个空的简单JavaScript对象（即**`{}`**）；
 > 2. 链接该对象（即设置该对象的构造函数）到另一个对象 ；
@@ -119,7 +119,6 @@ function Super(name, age) {
 
 const su = new Super('zs', 10)
 console.log(su) // {name: "ls", age: 20}
-console.log(su.name) // ls
 ```
 
 结论: 通过new操作符,Super创建出来的实例可以访问到构造函数中的属性和构造函数原型链中的属性.实例与构造函数通过原型链连接了起来
@@ -173,8 +172,8 @@ Sub.prototype.__proto__ == Super.prototype // true
 es6中的class语法其实只是语法糖,本质上还是通过原型链来继承,只是方便了书写
 
 <details>
-    <summary>示例</summary>
-    <pre>
+<summary>示例</summary>
+<pre>
 class Animal {
   constructor() {
     this.species = "动物";
@@ -196,7 +195,7 @@ Animal.prototype.sayHi(); //hi
 animal.sayHi(); //hi
 cat1.sayHi(); //hi
 console.log(cat1.species); // 动物
-    </pre>
+</pre>
 </details>
 
 ![es6](img/es6继承.png)

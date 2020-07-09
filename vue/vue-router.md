@@ -31,7 +31,6 @@
         html.innerHTML = location.hash.slice(1)
     })
 </script>
-复制代码
 ```
 
 - history api的实现原理
