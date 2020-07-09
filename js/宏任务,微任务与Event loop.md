@@ -20,8 +20,26 @@
 
 
 
-### 微任务(Microtasks)、宏任务(task)？
+### 宏任务(task)、微任务(Microtasks)？
 
 宏任务和微任务都是异步任务,它们都属于一个队列，主要区别在于他们的执行顺序，Event Loop的走向和取值。
 
 <img src="https://user-gold-cdn.xitu.io/2018/7/14/164974fa4b42e4af?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="cmd-markdown-logo" style="zoom:80%;" />
+
+#### 宏任务
+
+| #                       | 浏览器 | Node |
+| :---------------------- | :----: | :--: |
+| `I/O`                   |   ✅    |  ✅   |
+| `setTimeout`            |   ✅    |  ✅   |
+| `setInterval`           |   ✅    |  ✅   |
+| `setImmediate`          |   ❌    |  ✅   |
+| `requestAnimationFrame` |   ✅    |  ❌   |
+
+#### 微任务
+
+| #                            | 浏览器 | Node |
+| :--------------------------- | :----: | :--: |
+| `process.nextTick`           |   ❌    |  ✅   |
+| `MutationObserver`           |   ✅    |  ❌   |
+| `Promise.then catch finally` |   ✅    |  ✅   |

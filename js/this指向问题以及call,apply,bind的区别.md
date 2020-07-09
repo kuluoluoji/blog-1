@@ -14,21 +14,23 @@
 
 - **[Function.prototype.apply()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)**
 
-**`apply()`** 方法调用一个具有给定`this`值的函数，以及作为一个数组（或[类似数组对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)）提供的参数。
+  **`apply()`** 方法调用一个具有给定`this`值的函数，以及作为一个数组（或[类似数组对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)）提供的参数。
 
 - **Function.prototype.bind()**
 
-**`bind()`** 方法创建一个新的函数，在 `bind()` 被调用时，这个新函数的 `this` 被指定为 `bind()` 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。
+  **`bind()`** 方法创建一个新的函数，在 `bind()` 被调用时，这个新函数的 `this` 被指定为 `bind()` 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。
 
 - **Function.prototype.call()**
 
-**`call()`** 方法使用一个指定的 **`this`** 值和单独给出的一个或多个参数来调用一个函数。
+  **`call()`** 方法使用一个指定的 **`this`** 值和单独给出的一个或多个参数来调用一个函数。
 
 > **注意：**该方法的语法和作用与 [`apply()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 方法类似，只有一个区别，就是 `call()` 方法接受的是**一个参数列表**，而 `apply()` 方法接受的是**一个包含多个参数的数组**。
 
 总结:
-call和apply都是用来调用函数的,区别就在于二者接受的第二个参数不一样,call接受的是一个个参数,apply是接受一个数组或类数组类型的;
-而bind则是创建一个新的函数。
+<div style="color:red;font-size:18px">call和apply都是用来调用函数的,区别就在于二者接受的第二个参数不一样,call接受的是一个个参数,apply是接受一个数组或类数组类型的;
+而bind则是创建一个新的函数。</div>
+
+
 
 ```js
 let a = 20;
