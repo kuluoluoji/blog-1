@@ -17,7 +17,7 @@
 
 - [深拷贝,浅拷贝](./js/深拷贝,浅拷贝.md)
 - [作用域和闭包](./js/作用域与闭包.md)
-- [this 指向问题](./js/this指向问题以及call,apply,bind的区别)
+- [this 指向问题](./js/this指向问题以及call,apply,bind的区别.md)
 - [JavaScript 原型链与继承的学习](./js/js原型链与继承.md)
 - [实现一个简单的 sleep 函数](./js/实现一个简单的sleep函数.md)
 
