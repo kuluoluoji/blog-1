@@ -12,7 +12,7 @@
 #### HTTP
 
 - [http 协议](./http/http协议.md)
-- [cookie、localStorage、sessionStorage的区别](./http/cookie和token认证.md)
+- [cookie、localStorage、sessionStorage 的区别](./http/cookie和token认证.md)
 
 #### JavaScript
 
