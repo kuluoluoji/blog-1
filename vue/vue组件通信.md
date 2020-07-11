@@ -142,6 +142,8 @@ export default {
 
 [eventbus存在问题](https://juejin.im/post/5d358280e51d4556bc06704d#heading-5),所以需要在使用完后手动销毁它,在beforDestory和destoryed中使用$off
 
+`vm.__patch__(vm._vnode, null)`用来触发所有的destory钩子函数。
+
 ### Vuex
 
 **store的几个属性**

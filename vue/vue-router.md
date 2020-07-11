@@ -52,3 +52,35 @@
 ```
 
 需要注意的是: history模式在使用本地文件即file:///模式运行是不可用的,需要使用ip模式访问页面
+
+### 完整的导航解析流程
+
+1. 导航被触发。
+2. 在失活的组件里调用 `beforeRouteLeave` 守卫。
+3. 调用全局的 `beforeEach` 守卫。
+4. 在重用的组件里调用 `beforeRouteUpdate` 守卫 (2.2+)。
+5. 在路由配置里调用 `beforeEnter`。
+6. 解析异步路由组件。
+7. 在被激活的组件里调用 `beforeRouteEnter`。
+8. 调用全局的 `beforeResolve` 守卫 (2.5+)。
+9. 导航被确认。
+10. 调用全局的 `afterEach` 钩子。
+11. 触发 DOM 更新。
+12. 用创建好的实例调用 `beforeRouteEnter` 守卫中传给 `next` 的回调函数。
+
+### 路由懒加载
+
+动态加载组件
+
+```js
+const Foo = () => import(/* webpackChunkName: "group-foo" */ './Foo.vue')
+const router = new VueRouter({
+  routes: [
+    { path: '/foo', component: Foo }
+  ]
+})
+```
+
+其中`/* webpackChunkName: "group-foo" */`是webpack中的
+
+相关内容可以看这篇[文章](https://github.com/mrdulin/blog/issues/43)
