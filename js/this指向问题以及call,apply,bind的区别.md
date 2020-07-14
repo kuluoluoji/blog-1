@@ -2,11 +2,9 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Function.prototype.apply()](#functionprototypeapply)
-- [Function.prototype.bind()](#functionprototypebind)
-- [Function.prototype.call()](#functionprototypecall)
+- [call,apply,bind的使用](#callapplybind%E7%9A%84%E4%BD%BF%E7%94%A8)
 - [Set和Map数据结构](#set%E5%92%8Cmap%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)
-- [图解ES5和ES6中的继承](#%E5%9B%BE%E8%A7%A3es5%E5%92%8Ces6%E4%B8%AD%E7%9A%84%E7%BB%A7%E6%89%BF)
+- [箭头函数](#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

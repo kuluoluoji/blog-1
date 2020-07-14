@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [vue组件通信](#vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1)
+    - [props传值(父传子)](#props%E4%BC%A0%E5%80%BC%E7%88%B6%E4%BC%A0%E5%AD%90)
+    - [$emit(子传父)](#emit%E5%AD%90%E4%BC%A0%E7%88%B6)
+    - [事件总线EventBus(非父子)](#%E4%BA%8B%E4%BB%B6%E6%80%BB%E7%BA%BFeventbus%E9%9D%9E%E7%88%B6%E5%AD%90)
+  - [Vuex](#vuex)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## vue组件通信
 
 #### props传值(父传子)

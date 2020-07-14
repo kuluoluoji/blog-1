@@ -1,9 +1,24 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [宏任务、微任务、同步任务、异步任务与Event Loop](#%E5%AE%8F%E4%BB%BB%E5%8A%A1%E5%BE%AE%E4%BB%BB%E5%8A%A1%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E4%B8%8Eevent-loop)
+  - [同步和异步](#%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5)
+  - [js事件循环](#js%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF)
+  - [宏任务(task)、微任务(Microtasks)？](#%E5%AE%8F%E4%BB%BB%E5%8A%A1task%E5%BE%AE%E4%BB%BB%E5%8A%A1microtasks)
+    - [宏任务](#%E5%AE%8F%E4%BB%BB%E5%8A%A1)
+    - [微任务](#%E5%BE%AE%E4%BB%BB%E5%8A%A1)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 宏任务、微任务、同步任务、异步任务与Event Loop
 
 ### 同步和异步
 
 - 同步: 程序执行过程中,上一个任务结束立即执行下一个任务,执行的顺序和代码的顺序一致。
 - 异步: 程序执行过程中,上一个任务执行结束立即执行回调函数,下一个任务不用等到上一个任务执行完成再执行,执行的顺序和代码书写的顺序有些差异。
+
+常见的异步任务: Ajax,DOM事件操作,setTimeout,Promise的then方法,node读取文件
 
 参考链接:
 

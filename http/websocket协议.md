@@ -1,3 +1,11 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [为什么需要 WebSocket？](#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81-websocket)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ### 为什么需要 WebSocket？
 
 HTTP 协议有一个缺陷：通信只能由客户端发起。
