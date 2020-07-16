@@ -15,8 +15,6 @@
 
 **1.什么是 cookie**
 
-- cookie 是客户端保存用户信息的一种机制,用来记录用户的一些信息,实际上 Cookie 是服务器在**本地机器**上存储的一小段文本,并随着每次请求发送到服务器。
-
 [mdn](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies)关于 cookie 的解释
 
 > HTTP Cookie（也叫 Web Cookie 或浏览器 Cookie）是服务器发送到用户浏览器并保存在本地的一小块数据,它会在浏览器下次向同一服务器再次发起请求时被携带并发送到服务器上。
