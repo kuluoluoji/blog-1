@@ -1,12 +1,11 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [cookie](#cookie)
 - [Web Storage API](#web-storage-api)
 - [token](#token)
 - [Cookie, LocalStorage 与 SessionStorage 的区别](#cookie-localstorage-%E4%B8%8E-sessionstorage-%E7%9A%84%E5%8C%BA%E5%88%AB)
-    - [localStorage 和 sessionStorage](#localstorage-%E5%92%8C-sessionstorage)
+  - [localStorage 和 sessionStorage](#localstorage-%E5%92%8C-sessionstorage)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
