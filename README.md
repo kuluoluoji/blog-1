@@ -10,6 +10,9 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+### Software
+
+- [Vim 中文乱码问题](../../issues/8)
 
 ### Git
 
