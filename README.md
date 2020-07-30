@@ -17,9 +17,9 @@
 ### Git
 
 - [git 从远程仓库删除文件,但本地文件不删除](../../issues/4)
-- [git pull解决文件冲突问题](../../issues/15)
+- [git pull 解决文件冲突问题](../../issues/15)
 - [git 修改本地的远程仓库地址](../../issues/6)
-- [git bash用命令打开资源管理器](../../issues/13)
+- [git bash 用命令打开资源管理器](../../issues/13)
 
 ### HTTP
 
