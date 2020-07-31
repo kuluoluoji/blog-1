@@ -1,11 +1,15 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [目录](#%E7%9B%AE%E5%BD%95)
-  - [Git](#git)
-  - [HTTP](#http)
-  - [JavaScript](#javascript)
-  - [Vue](#vue)
+
+- [Software](#software)
+- [Git](#git)
+- [HTTP](#http)
+- [CSS](#css)
+- [JavaScript](#javascript)
+- [Vue](#vue)
+      - [Vue 性能优化](#vue-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96)
+      - [Vuex](#vuex)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
