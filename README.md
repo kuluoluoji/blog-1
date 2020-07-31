@@ -47,3 +47,5 @@
 - [单页路由解析与实现](https://github.com/chenqf/frontEndBlog/issues/11)
 ###### Vue性能优化
 - [路由懒加载](../../issues/7)
+###### Vuex
+- [实现 Vuex 与组件 data 之间数据同步更新进而驱动视图更新](../../issues/16)
