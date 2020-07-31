@@ -1,7 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [目录](#%E7%9B%AE%E5%BD%95)
   - [Git](#git)
   - [HTTP](#http)
@@ -45,7 +44,11 @@
 - [vue 组件通信](./vue/vue组件通信.md)
 - [vue-router 的原理](./vue/vue-router.md)
 - [单页路由解析与实现](https://github.com/chenqf/frontEndBlog/issues/11)
-###### Vue性能优化
+
+###### Vue 性能优化
+
 - [路由懒加载](../../issues/7)
+
 ###### Vuex
+
 - [实现 Vuex 与组件 data 之间数据同步更新进而驱动视图更新](../../issues/16)
