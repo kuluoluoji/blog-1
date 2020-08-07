@@ -156,6 +156,46 @@ export default {
 
 `vm.__patch__(vm._vnode, null)`用来触发所有的destory钩子函数。
 
+### $refs
+
+通过this.$refs.[componentName]来访问已注册的组件
+
+```vue
+// Props传值
+<template>
+  <div class="father">
+    <component-a :my-msg="msg" ref="myComponent"></component-a>
+    <button @click="bindClick">点击</button>
+  </div>
+</template>
+
+<script>
+import componentA from "@/components/componentA"
+export default {
+  components: {
+    componentA: componentA
+  },
+  data() {
+    return {
+      msg: "12345"
+    }
+  },
+  methods: {
+    bindClick(props) {
+      console.log(props)
+      console.log(this.$refs.myComponent)
+    }
+  }
+}
+</script>
+```
+
+![image-20200802131621838](https://minimax-1256590847.cos.ap-shanghai.myqcloud.com/img/image-20200802131621838.png)
+
+通过官方文档可以看到vm.$refs是一个对象,持有注册过 [`ref` attribute](https://cn.vuejs.org/v2/api/#ref) 的所有 DOM 元素和组件实例。
+
+所以只要给组件注册过ref属性,就可以通过vm.$refs来访问到该组件。
+
 ### Vuex
 
 **store的几个属性**
