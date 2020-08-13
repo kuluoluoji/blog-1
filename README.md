@@ -27,6 +27,7 @@
 ### HTTP
 
 - [http 协议](./http/http协议.md)
+- [正向代理和反向代理](../../issues/19)
 - [cookie、localStorage、sessionStorage 的区别](./http/cookie和localStorage.md)
 - [Axios 拦截器的作用](../../issues/11)
 
