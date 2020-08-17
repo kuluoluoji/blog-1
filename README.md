@@ -48,6 +48,7 @@
 ### Vue
 
 - [vue 生命周期](./vue/vue生命周期.md)
+- [Vue 插槽---具名插槽和作用域插槽](../../issues/21)
 - [vue 组件通信](./vue/vue组件通信.md)
 - [vue-router 的原理](./vue/vue-router.md)
 - [单页路由解析与实现](https://github.com/chenqf/frontEndBlog/issues/11)
