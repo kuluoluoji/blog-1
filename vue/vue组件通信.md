@@ -14,6 +14,8 @@
 
 #### props传值(父传子)
 
+https://cloud.tencent.com/developer/article/1090649
+
 #### $emit(子传父)
 
 vm.$emit( event, arg ) //触发当前实例上的事件
