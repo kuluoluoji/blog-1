@@ -13,11 +13,12 @@ const fa = new Father('zs', 20)
 // fa.sayHi() // Hi
 
 class Son extends Father {
-  constructor(sex = 1) {
-    super()
+  constructor(name, age, sex = 1) {
+    super(name, age) // 通过super()调用父类,使this指向Son;super()实质是 Son.call(this);
+    // 上面一句执行的是super.call(this,name,age)
     this.sex = sex
   }
 }
 
-const p = new Son()
-console.log(p)
+const p = new Son('zs', 22, 0)
+console.log(p.name)

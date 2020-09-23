@@ -151,11 +151,13 @@ function Sub() {}
 
 Sub.prototype = new Super()	// 继承了Super
 /* 继承是通过创建Super的实例,并将该实例赋给Sub.prototype实现的,本质是重写原型对象,用一个新类型
-的实例替换 */
+的实例替换,此时Sub.prototype.constructor是指向Super的 */
+Sub.prototype.constructor == Super // true
+
 Sub.prototype.constructor = Sub // Super => Sub.prototype => Sub
 /* 任何一个prototype对象都有一个constructor属性，指向它的构造函数。
-如果没有"Sub.prototype = new Super();"这一行，Sub.prototype.constructor是指向Sub的；
-加了这一行以后，Sub.prototype.constructor指向Super。*/
+如果没有"Sub.prototype = new Super();"这一行，Sub.prototype.constructor是指向Sub的;
+加了这一行以后，Sub.prototype.constructor指向Super。所以需要让Sub.prototype.constructor重新指向Sub*/
 
 var p = new Sub()
 
