@@ -38,7 +38,7 @@
 - [深拷贝,浅拷贝](./js/深拷贝,浅拷贝.md)
 - [作用域和闭包](./js/作用域与闭包.md)
 - [this 指向问题](./js/this指向问题以及call,apply,bind的区别.md)
-- [ES6---class 语法糖](./src/es6/Class语法糖/README.md)
+- [ES6---class 语法糖](./src/es6/Class语法糖)
 - [JavaScript 原型链与继承的学习](./js/js原型链与继承.md)
 - [实现一个简单的 sleep 函数](./js/实现一个简单的sleep函数.md)
 - [防抖和节流](https://github.com/fncheng/CSS/tree/master/CSS%E5%8A%A8%E7%94%BB/%E9%98%B2%E6%8A%96%E5%92%8C%E8%8A%82%E6%B5%81)
