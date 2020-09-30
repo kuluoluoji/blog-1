@@ -3,6 +3,7 @@
 function timeoutPromise(interval) {
   return new Promise((resolve, reject) => {
     setTimeout(function () {
+      console.log('done')
       resolve('done')
     }, interval)
   })
