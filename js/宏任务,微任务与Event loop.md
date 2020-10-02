@@ -24,6 +24,9 @@
 ### 同步和异步
 
 - 同步: 程序执行过程中,上一个任务结束立即执行下一个任务,执行的顺序和代码的顺序一致。
+
+console.log() 就是一个同步任务
+
 - 异步: 程序执行过程中,上一个任务执行结束立即执行回调函数,下一个任务不用等到上一个任务执行完成再执行,执行的顺序和代码书写的顺序有些差异。
 
 常见的异步任务: Ajax,DOM事件操作,setTimeout,Promise的then方法,node读取文件
@@ -43,6 +46,34 @@
 
 - [javascript是单线程语言，那他的异步机制是怎么实现的？](https://github.com/zlx362211854/daily-study/issues/22#)
 
+**异步任务又分为宏任务和微任务**
+
+#### 宏任务(task)、微任务(Microtasks)？
+
+宏任务和微任务都是异步任务,它们都属于一个队列，主要区别在于他们的执行顺序，Event Loop的走向和取值。
+
+<img src="https://user-gold-cdn.xitu.io/2018/7/14/164974fa4b42e4af?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="cmd-markdown-logo" style="zoom:80%;" />
+
+##### 宏任务
+
+| #                       | 浏览器 | Node |
+| :---------------------- | :----: | :--: |
+| `I/O`                   |   ✅    |  ✅   |
+| `setTimeout`            |   ✅    |  ✅   |
+| `setInterval`           |   ✅    |  ✅   |
+| `setImmediate`          |   ❌    |  ✅   |
+| `requestAnimationFrame` |   ✅    |  ❌   |
+
+##### 微任务
+
+| #                            | 浏览器 | Node |
+| :--------------------------- | :----: | :--: |
+| `process.nextTick`           |   ❌    |  ✅   |
+| `MutationObserver`           |   ✅    |  ❌   |
+| `Promise.then catch finally` |   ✅    |  ✅   |
+
+
+
 ### js事件循环
 
 **Event Queue:**
@@ -59,26 +90,6 @@
 
 
 
-### 宏任务(task)、微任务(Microtasks)？
 
-宏任务和微任务都是异步任务,它们都属于一个队列，主要区别在于他们的执行顺序，Event Loop的走向和取值。
 
-<img src="https://user-gold-cdn.xitu.io/2018/7/14/164974fa4b42e4af?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="cmd-markdown-logo" style="zoom:80%;" />
-
-#### 宏任务
-
-| #                       | 浏览器 | Node |
-| :---------------------- | :----: | :--: |
-| `I/O`                   |   ✅    |  ✅   |
-| `setTimeout`            |   ✅    |  ✅   |
-| `setInterval`           |   ✅    |  ✅   |
-| `setImmediate`          |   ❌    |  ✅   |
-| `requestAnimationFrame` |   ✅    |  ❌   |
-
-#### 微任务
-
-| #                            | 浏览器 | Node |
-| :--------------------------- | :----: | :--: |
-| `process.nextTick`           |   ❌    |  ✅   |
-| `MutationObserver`           |   ✅    |  ❌   |
-| `Promise.then catch finally` |   ✅    |  ✅   |
+![](https://user-images.githubusercontent.com/18441915/68822044-d088ad00-06ca-11ea-8570-54a683dfef5d.jpg)
