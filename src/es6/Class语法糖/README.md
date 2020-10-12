@@ -50,15 +50,13 @@ console.log(fa) // Father { name: 'zs', age: 20 }
 fa.sayHi() // Hi
 ```
 
+### constructor 方法
 
-
-### constructor方法
-
-`constructor` 方法是类的构造函数，是一个默认方法，通过 `new` 命令创建对象实例时，自动调用该方法。一个类必须有 `constructor` 方法，如果没有显式定义，一个默认的 `consructor` 方法会被默认添加。所以即使你没有添加构造函数，也是会有一个默认的构造函数的。一般 `constructor` 方法返回实例对象 `this` ，但是也可以指定  `constructor` 方法返回一个全新的对象，让返回的实例对象不是该类的实例。
+`constructor` 方法是类的构造函数，是一个默认方法，通过 `new` 命令创建对象实例时，自动调用该方法。一个类必须有 `constructor` 方法，如果没有显式定义，一个默认的 `consructor` 方法会被默认添加。所以即使你没有添加构造函数，也是会有一个默认的构造函数的。一般 `constructor` 方法返回实例对象 `this` ，但是也可以指定 `constructor` 方法返回一个全新的对象，让返回的实例对象不是该类的实例。
 
 ---
 
-### super关键字
+### super 关键字
 
 引用[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/super)的说法:
 
