@@ -1,3 +1,12 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [async await 是Promise的语法糖](#async-await-%E6%98%AFpromise%E7%9A%84%E8%AF%AD%E6%B3%95%E7%B3%96)
+- [async await 防止阻塞](#async-await-%E9%98%B2%E6%AD%A2%E9%98%BB%E5%A1%9E)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 [https://developer.mozilla.org/zh-CN/docs/learn/JavaScript/%E5%BC%82%E6%AD%A5/Async_await](https://developer.mozilla.org/zh-CN/docs/learn/JavaScript/异步/Async_await)
 
 #### async await 是Promise的语法糖

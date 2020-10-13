@@ -1,8 +1,15 @@
----
-title: es6之Promise对象的学习
-tags:
-- JavaScript
----
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Promise的状态](#promise%E7%9A%84%E7%8A%B6%E6%80%81)
+- [then-catch](#then-catch)
+  - [then vs then catch](#then-vs-then-catch)
+  - [Promise的学习](#promise%E7%9A%84%E5%AD%A6%E4%B9%A0)
+  - [链式操作+递归](#%E9%93%BE%E5%BC%8F%E6%93%8D%E4%BD%9C%E9%80%92%E5%BD%92)
+- [Promise 防止阻塞](#promise-%E9%98%B2%E6%AD%A2%E9%98%BB%E5%A1%9E)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 https://www.cnblogs.com/lvdabao/p/es6-promise-1.html
 
