@@ -31,6 +31,7 @@
 ### CSS
 
 - [CSS 浮动和定位的问题](../../issues/10)
+- [Vue 项目中 background-image 的使用](../../issues/21)
 
 ### JavaScript
 
