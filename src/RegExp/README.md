@@ -23,6 +23,8 @@ replace 用法:
 
 [https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#%E6%8C%87%E5%AE%9A%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E4%BD%9C%E4%B8%BA%E5%8F%82%E6%95%B0](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#指定一个函数作为参数)
 
+## RegExp
+
 ### 语法
 
 ##### 正向先行断言(?=pattern)
@@ -74,3 +76,12 @@ var result = re.exec('hello br')
 |        | multiline      | 是否使用了 "`m`" 标记使正则工作在多行模式（也就是，^ 和 \$ 可以匹配字符串中每一行的开始和结束（行是由 \n 或 \r 分割的），而不只是整个输入字符串的最开始和最末尾处。） | `false`                                               |
 |        | source         | 正则匹配的字符串                                                                                                                                                      | `(?<test>hello)+\s(br)+`                              |
 
+## replace的用法
+
+
+
+
+
+### 数字千分位表示
+
+运行过程: https://www.cnblogs.com/lvmylife/p/8287247.html
