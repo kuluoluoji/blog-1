@@ -36,6 +36,7 @@
 ### JavaScript
 
 - [Javascript 操作数据](../../issues/20)
+- [参数传递、可选参数、默认参数以及参数省略](../../issues/23)
 - [深拷贝,浅拷贝](./js/深拷贝,浅拷贝.md)
 - [作用域和闭包](./js/作用域与闭包.md)
 - [this 指向问题](./js/this指向问题以及call,apply,bind的区别.md)
