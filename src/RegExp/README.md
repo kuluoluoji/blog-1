@@ -45,6 +45,31 @@ replace 用法:
 
 **～～关于后向断言，js目前不支持～～**
 
+#### 使用变量
+
+首先字面量表示法不支持变量，必须用RegExp构造函数
+
+```js
+const variable = ’变量‘
+const reg1 = new RegExp(`test${variable}`, 'g')
+```
+
+#### 正则表达式动态拼接
+
+```js
+const arr = ['a', 'b', 'c']
+let matchStr = ''
+arr.forEach((item) => {
+  console.log(item)
+  matchStr += `(${item})*`
+})
+let reg = new RegExp(`${matchStr}`, 'g')
+console.log(reg)
+
+```
+
+
+
 ### 捕获组
 
 https://www.runoob.com/w3cnote/java-capture-group.html
