@@ -1,8 +1,12 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
+- [路由](#%E8%B7%AF%E7%94%B1)
+  - [动态路由匹配](#%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E5%8C%B9%E9%85%8D)
+    - [$router和$route的区别](#router%E5%92%8Croute%E7%9A%84%E5%8C%BA%E5%88%AB)
+  - [$route](#route)
 - [路由实现的核心原理](#%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86)
+  - [路由模式](#%E8%B7%AF%E7%94%B1%E6%A8%A1%E5%BC%8F)
 - [导航守卫](#%E5%AF%BC%E8%88%AA%E5%AE%88%E5%8D%AB)
   - [导航守卫作用解析](#%E5%AF%BC%E8%88%AA%E5%AE%88%E5%8D%AB%E4%BD%9C%E7%94%A8%E8%A7%A3%E6%9E%90)
   - [完整的导航解析流程](#%E5%AE%8C%E6%95%B4%E7%9A%84%E5%AF%BC%E8%88%AA%E8%A7%A3%E6%9E%90%E6%B5%81%E7%A8%8B)
@@ -18,7 +22,60 @@
 
 [单页路由解析与实现](https://github.com/chenqf/frontEndBlog/issues/11)
 
+## 路由
+
+### 动态路由匹配
+
+在`vue-router`中使用“动态路由参数”来匹配，使用`：`标记。
+
+#### $router和$route的区别
+
+$router是VueRouter的实例,是路由操作对象,只写对象,想要导航到不同的url,则使用router.push()方法
+
+$route为当前router跳转对象,路由信息对象,只读对象,里面可以获取name、path、query、params等
+
+**打印$route和$router**
+
+- $route
+  ![image](https://user-images.githubusercontent.com/37958055/86729793-6f9a5480-c060-11ea-9438-8fb3b953647c.png)
+- $router
+  ![](https://minimax-1256590847.cos.ap-shanghai.myqcloud.com/img/20200707145057.png)
+
+详情见https://router.vuejs.org/zh/api/#%E8%B7%AF%E7%94%B1%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7
+
+### $route
+
+- path: 当前路由路径
+- params: 一个 key/value 对象，包含了动态片段和全匹配片段，如果没有路由参数，就是一个空对象。
+  - query: 查询参数，即url中?后面部分。例如，对于路径 /foo?user=1，则有 $route.query.user == 1，如果没有查询参数，则是个空对象。
+- hash: 当前路由的 hash 值 (带 #) ，如果没有 hash 值，则为空字符串。
+- fullPath: 完成解析后的 URL，包含查询参数和 hash 的完整路径。(关于URL的解释可以参见[浏览器访问URL的过程]([https://github.com/fncheng/blog/blob/master/http/http%E5%8D%8F%E8%AE%AE.md#%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BE%93%E5%85%A5-url-%E8%AE%BF%E9%97%AE%E7%BD%91%E5%9D%80%E7%9A%84%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88](https://github.com/fncheng/blog/blob/master/http/http协议.md#在浏览器输入-url-访问网址的过程中发生了什么)))
+- name: 当前路由的名称，如果有的话。(查看[命名路由](https://router.vuejs.org/zh/guide/essentials/named-routes.html))
+- redirectedFrom: 如果存在重定向，即为重定向来源的路由的名字。(参阅[重定向和别名](https://router.vuejs.org/zh/guide/essentials/redirect-and-alias.html))
+
+就以`http://localhost:8080/#/user/2`这段为例
+
+path就是`/user/2`
+
+params是`{"id":"2"}`
+
+fullPath是`"/user/2"`·
+
+### $router
+
+
+
 ## 路由实现的核心原理
+
+### 路由模式
+
+hash模式和history模式
+
+vue-router默认hash模式,url会带有"#"标识符,如果想要去除#标识,启用history模式.
+
+注意:当启用history模式 时,地址栏不可带有/#/,否则会访问出错
+
+[**hash模式和history模式的不同**](https://juejin.im/post/5cde4404f265da1b971a42c8)
 
 - hash 的实现原理
 
@@ -64,8 +121,12 @@
 区别:
 
 - 使用 location.href = 'url' 来跳转,简单方便,但是刷新了页面
+
 - 使用 history.pushState('url') 无须刷新页面,静态跳转
+
 - 引进 router,然后使用 router.push('url') 来跳转,使用了 diff 算法,按需加载,减少了 dom 的消耗
+
+  
 
 ## 导航守卫
 
