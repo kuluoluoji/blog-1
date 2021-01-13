@@ -29,6 +29,8 @@ console.log() 就是一个同步任务
 
 - 异步: 程序执行过程中,上一个任务执行结束立即执行回调函数,下一个任务不用等到上一个任务执行完成再执行,执行的顺序和代码书写的顺序有些差异。
 
+[**异步简介**](https://developer.mozilla.org/zh-CN/docs/learn/JavaScript/%E5%BC%82%E6%AD%A5/%E7%AE%80%E4%BB%8B)
+
 常见的异步任务: Ajax,DOM事件操作,setTimeout,Promise的then方法,node读取文件
 
 ##### 异步的三种实现方式
