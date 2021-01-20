@@ -1,3 +1,8 @@
+/**
+ * ***********************
+ *    Promise防止阻塞
+ * ***********************
+ */
 function timeoutPromise(interval) {
   return new Promise((resolve, reject) => {
     setTimeout(function () {
