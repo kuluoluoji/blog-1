@@ -67,6 +67,10 @@
 
 - [实现 Vuex 与组件 data 之间数据同步更新进而驱动视图更新](../../issues/16)
 
+###### Vue-cli
+
+- [vue-cli中的configureWebpack](../../issues/26)
+
 ### Webpack
 
 - [在webpack中利用postcss将px转换为vw](../../issues/25)
