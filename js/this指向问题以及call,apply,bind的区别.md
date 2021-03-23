@@ -14,6 +14,10 @@
 
   **`apply()`** 方法调用一个具有给定`this`值的函数，以及作为一个数组（或[类似数组对象](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)）提供的参数。
 
+  ```js
+  function.call(thisArg, arg1, arg2, ...)
+  ```
+
 - **Function.prototype.bind()**
 
   **`bind()`** 方法创建一个新的函数，在 `bind()` 被调用时，这个新函数的 `this` 被指定为 `bind()` 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。
@@ -21,6 +25,10 @@
 - **Function.prototype.call()**
 
   **`call()`** 方法使用一个指定的 **`this`** 值和单独给出的一个或多个参数来调用一个函数。
+  
+  ```js
+  function.apply(thisArg, [argsArray])
+  ```
 
 > **注意：**该方法的语法和作用与 [`apply()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) 方法类似，只有一个区别，就是 `call()` 方法接受的是**一个参数列表**，而 `apply()` 方法接受的是**一个包含多个参数的数组**。
 
@@ -72,3 +80,16 @@ Set相当于一个没有重复数据的数组
 > “箭头函数”的`this`，总是指向定义时所在的对象，而不是运行时所在的对象。
 
 箭头函数没有this,它的this取决于该函数外部非箭头函数的this值
+
+
+
+## this指向问题
+
+### 函数this
+
+**this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁**，**实际上this的最终指向的是那个调用它的对象**
+
+`const`和 `let`不会在全局声明时（在最顶部的范围）创建[`window`](https://developer.mozilla.org/zh-CN/docs/Web/API/Window) 对象的属性。
+
+即在全局时，通过const 和 let的声明不会挂载到window上，也无法通过this获取
+

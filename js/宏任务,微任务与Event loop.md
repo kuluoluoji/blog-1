@@ -42,6 +42,8 @@ console.log() 就是一个同步任务
 3）Promise
 ```
 
+需要注意的是⚠️：Promise构造函数是同步执行的（new Promise是同步的），而Promise是异步的（then，catch操作是异步的）
+
 参考链接:
 
 - [JS事件循环机制（event loop）](https://juejin.im/post/5b498d245188251b193d4059#heading-2)
@@ -50,7 +52,7 @@ console.log() 就是一个同步任务
 
 **异步任务又分为宏任务和微任务**
 
-#### 宏任务(task)、微任务(Microtasks)？
+### 宏任务(task)、微任务(Microtasks)？
 
 宏任务和微任务都是异步任务,它们都属于一个队列，主要区别在于他们的执行顺序，Event Loop的走向和取值。
 
@@ -95,3 +97,13 @@ console.log() 就是一个同步任务
 
 
 ![](https://user-images.githubusercontent.com/18441915/68822044-d088ad00-06ca-11ea-8570-54a683dfef5d.jpg)
+
+
+
+### js执行顺序
+
+https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/
+
+同步 > 异步 > 微任务 > 宏任务
+
+Promise构造函数是同步执行的，即new Promise() 是同步的，【**也就是说new Promise()会立即执行**】then函数本身也是同步的，不过then(callback) 里面的callback被放入了微任务队列，产生了异步执行
