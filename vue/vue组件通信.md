@@ -24,6 +24,7 @@ vm.$on( event, fn );//监听event事件后运行 fn；
 
 ```vue
 //从About.vue向App.vue传值
+
 //App.vue
 //html
 <about @countChange="updateCount"></about>

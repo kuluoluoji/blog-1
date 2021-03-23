@@ -63,7 +63,15 @@ fullPath是`"/user/2"`·
 
 ### $router
 
+#### 编程式导航
 
+**https://router.vuejs.org/zh/guide/essentials/navigation.html**
+
+##### router.push
+
+```js
+# 注意：如果提供了 path，params 会被忽略，上述例子中的 query 并不属于这种情况。取而代之的是下面例子的做法，你需要提供路由的 name 或手写完整的带有参数的 path：
+```
 
 ## 路由实现的核心原理
 
@@ -183,3 +191,37 @@ const router = new VueRouter({
 其中`/* webpackChunkName: "group-foo" */`是 webpack 中的
 
 相关内容可以看这篇[文章](https://github.com/mrdulin/blog/issues/43)
+
+## 常见问题
+
+### 关于vue-router的beforeEach无限循环的问题
+
+**预期：**使用beforeEach 时，判断用户是否登录；已登录，则next()跳转至相应页面；未登录，则跳转至登录页
+
+**代码：**
+
+```js
+// isLogined 用来判断用户是否已登录
+router.beforeEach((to, from, next) => {
+  if(isLogined){
+    next()；
+  }else{
+    console.log('测试')
+    next('login')
+  }
+})
+```
+
+**实际表现：**以上会导致路由无限循环
+
+**原因：**
+
+- next() 表示路由成功，直接进入to路由，不会再次调用router.beforeEach()
+- next('login') 表示路由拦截成功，重定向至login，会再次调用router.beforeEach()
+
+也就是说beforeEach()必须调用next(),否则就会出现无限循环。
+
+官网是这样说明的:
+
+> **`next('/')` 或者 `next({ path: '/' })`**: 跳转到一个不同的地址。当前的导航被中断，然后进行一个新的导航。
+
