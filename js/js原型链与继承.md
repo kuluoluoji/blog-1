@@ -76,6 +76,8 @@ console.log(obj.prototype === me.__proto__) // false
 
 > **`Object.create()`**方法创建一个新对象，使用现有的对象来提供新创建的对象的`__proto__`。
 >
+> `Object.create`就是将新对象的`__proto__`指向括号内参数
+>
 > ```js
 > A.prototype = Object.create(A.prototype)
 > ```
@@ -234,5 +236,60 @@ function _inherits(subClass, superClass) {
   })
   if (superClass) _setPrototypeOf(subClass, superClass)
 }
+```
+
+
+
+
+
+关于es6 class是es5 原型的语法糖
+
+```js
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  getName() {
+    return this.name;
+  }
+}
+let a = new Person('seven');
+console.log(a.name);
+console.log(a.getName());
+console.log(Object.getPrototypeOf(a) === Person.prototype);
+```
+
+用Babel转成es5
+
+```js
+"use strict";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Person = /*#__PURE__*/function () {
+  function Person(name) {
+    _classCallCheck(this, Person);
+
+    this.name = name;
+  }
+
+  _createClass(Person, [{
+    key: "getName",
+    value: function getName() {
+      return this.name;
+    }
+  }]);
+
+  return Person;
+}();
+
+var a = new Person('seven');
+console.log(a.name);
+console.log(a.getName());
+console.log(Object.getPrototypeOf(a) === Person.prototype);
 ```
 
