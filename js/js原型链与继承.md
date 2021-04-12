@@ -240,7 +240,7 @@ function _inherits(subClass, superClass) {
 
 
 
-
+## es6和es5的转化
 
 关于es6 class是es5 原型的语法糖
 
